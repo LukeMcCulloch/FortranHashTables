@@ -171,9 +171,9 @@ MODULE hash_in2r_class
     DEALLOCATE(self%values)
     DEALLOCATE(self%used)
     ALLOCATE(self%keys(self%new_size))
-    self%keys(:) = ""
+    self%keys(:)    = 0
     ALLOCATE(self%values(self%new_size,4,3))
-    self%values(:,:,:) = ""
+    self%values(:,:,:)= 0.0
     ALLOCATE(self%used(self%new_size))
     self%used(:) = .FALSE.
     self%keys(1:self%current_size) = temp_keys(:)

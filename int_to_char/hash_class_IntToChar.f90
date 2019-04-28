@@ -169,7 +169,7 @@ CONTAINS
     DEALLOCATE(self%values)
     DEALLOCATE(self%used)
     ALLOCATE(self%keys(self%new_size))
-    self%keys(:) = ""
+    self%keys(:) = 0
     ALLOCATE(self%values(self%new_size))
     self%values(:) = ""
     ALLOCATE(self%used(self%new_size))
